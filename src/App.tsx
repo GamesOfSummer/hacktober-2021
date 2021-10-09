@@ -2,11 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { get } from 'lodash-es';
+import Mettaton from './Mettaton';
 
 function App() {
   var test = get({data: 'value'},'data');
   return (
     <div className="App">
+      <Mettaton>
+      </Mettaton>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
