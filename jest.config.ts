@@ -81,7 +81,6 @@ export default {
   //   "node"
   // ],
 
-
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
 
@@ -140,26 +139,25 @@ export default {
 
   // The test environment that will be used for testing
 
-
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
 
-  testEnvironment: "node",
-  moduleDirectories: ["node_modules", "src"],
-  modulePaths: [
-    "<rootDir>"
+  testEnvironment: 'node',
+  moduleDirectories: ['node_modules', 'src'],
+  modulePaths: ['<rootDir>'],
+
+  testPathIgnorePatterns: [
+    '<rootDir>/build/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/scripts/',
+    '.tsx',
   ],
 
-  testPathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/', '<rootDir>/scripts/', '.tsx'],
+  transform: { '^.+\\.(j|t)sx?$': 'ts-jest' },
 
-
-
-  transform: {"^.+\\.(j|t)sx?$": "ts-jest",},
-  
   transformIgnorePatterns: [
-    "<rootDir>/node_modules/(?!lodash-es/.*|source-map-support.*)"
+    '<rootDir>/node_modules/(?!lodash-es/.*|source-map-support.*)',
   ],
-
 
   // Adds a location field to test results
   // testLocationInResults: false,
@@ -189,7 +187,6 @@ export default {
 
   // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"
   // timers: "real",
-
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
