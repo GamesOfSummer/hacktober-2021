@@ -1,20 +1,46 @@
 import React from 'react';
-import { Accordion, Button, Card, Row, Col } from 'react-bootstrap';
+import { Accordion, Button, Card, Row, Col, Container } from 'react-bootstrap';
+import MettatonOutputScreen from './MettatonOutputScreen';
+import MettatonButton from './MettatonButton';
+
+import './Mettaton.css';
 
 const Mettaton = () => {
   return (
-    <div style={{ minHeight: '1000px' }}>
-      Mettaton
-      <Row>
-        <Col xs={0} lg={1} xl={1} />
-        <Col xs={12} sm={12} lg={10} xl={10}>
-          <Accordion defaultActiveKey="0"></Accordion>
-          <div style={{ padding: '30pt' }} />
-        </Col>
-        <Col xs={0} lg={1} xl={1} />
-      </Row>
+    <div className="mettatonFrame">
+    <div className="mainMettaton">
+    <MettatonOutputScreen/>
+    <div className="button-row">
+      <MettatonButton label={'Clear'}/>
+      <MettatonButton label={'Delete'}/>
+      <MettatonButton label={'.'}/>
+      <MettatonButton label={'/'}/>
     </div>
-  );
-};
+    <div className="button-row">
+      <MettatonButton label={'7'}/>
+      <MettatonButton label={'8'}/>
+      <MettatonButton label={'9'}/>
+      <MettatonButton label={'*'}/>
+    </div>
+    <div className="button-row">
+      <MettatonButton label={'4'}/>
+      <MettatonButton label={'5'}/>
+      <MettatonButton label={'6'}/>
+      <MettatonButton label={'-'}/>
+    </div>
+    <div className="button-row">
+      <MettatonButton label={'1'}/>
+      <MettatonButton label={'2'}/>
+      <MettatonButton label={'3'}/>
+      <MettatonButton label={'+'}/>
+    </div>
+    <div className="button-row">
+      <MettatonButton label={'0'}/>
+      <MettatonButton label={'='}/>
+    </div>
+    </div>
+    </div>
+  )
+}
 
 export default Mettaton;
