@@ -1,5 +1,4 @@
 import React from 'react';
-import { Accordion, Button, Card, Row, Col, Container } from 'react-bootstrap';
 import MettatonOutputScreen from './MettatonOutputScreen';
 import MettatonButton from './MettatonButton';
 
