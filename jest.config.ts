@@ -153,7 +153,7 @@ export default {
     '.tsx',
   ],
 
-  transform: { '^.+\\.(j|t)sx?$': 'ts-jest' },
+  transform: { '^.+\\.(j|t)sx?$': 'esbuild-jest' },
 
   transformIgnorePatterns: [
     '<rootDir>/node_modules/(?!lodash-es/.*|source-map-support.*)',
